@@ -1,0 +1,28 @@
+ALGORITHM phrase
+VAR
+    ch : CHAR;
+    nb_char : INTEGER ;
+    nb_mots : INTEGER ;
+    nb_voy : INTEGER ;
+BEGIN
+    ch := '';
+    nb_char:=0;
+    WHILE (ch <> '.') DO
+        Read(ch);
+        nb_char := nb_char +1;
+        nb_voy:=0;
+        IF (ch = 'a' OR ch='e' OR ch='i' OR ch='o' OR ch='u' OR ch='y') THEN
+         nb_voy := nb_voy +1;
+        END_IF
+
+        nb_mots:=0;
+        IF (ch=' ') THEN
+            nb_mots := nb_mots +1;
+        END_IF
+        
+    END_WHILE
+
+    Write("le nombre de caractère est ",nb_char);
+    Write("Le nombre de mots dans la phrase est",nb_mots);
+    Write("le nombre de voyelles dans la phrase. est",nb_voy);
+END
